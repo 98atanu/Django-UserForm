@@ -3,7 +3,7 @@
 
 {% block Body %}
 <div class="container my-4">
-    <form action="{% url 'update_UserForm' pk=user_info.pk %}" method="POST">
+    <form action="{% url 'update_user_form' pk=user_info.pk %}" method="POST">
         {% csrf_token %}
         <h2>Update UserForm</h2>
         <input class="form-control form-control my-2" type="text" value="{{user_info.customer_name}}" name="customer_name" placeholder="Customer Name"

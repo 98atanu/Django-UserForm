@@ -18,12 +18,12 @@ def home_user_form(request):
             all_user = {'all_user': form}
             return render(request,"index.html",all_user)
         
-def delete_UserForm(request,pk):
+def delete_user_form(request,pk):
     delete_info = UserForm.objects.get(pk=pk)
     delete_info.delete()      
     return redirect('/')
 
-def update_UserForm(request,pk):
+def update_user_form(request,pk):
     update_info = UserForm.objects.get(pk=pk)
     if request.method=='POST':
         new_form = ModelForm(request.POST)
